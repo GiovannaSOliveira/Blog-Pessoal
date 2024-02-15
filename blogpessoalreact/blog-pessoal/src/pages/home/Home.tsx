@@ -1,12 +1,15 @@
-import React from 'react';
 import './Home.css';
 
-function Home(){
+interface testeProps {
+    title: string;
+    description: string;
+  }
+  
+function Home(props:testeProps){
     return (
         <>
-            <h1 className='titulo'>Home</h1>
-           
-           <img src="https://i.imgur.com/tJxoueU.jpeg" className='img' alt="placeholder" />
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
         </>
     );
 }
