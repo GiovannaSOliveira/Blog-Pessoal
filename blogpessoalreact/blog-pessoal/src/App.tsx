@@ -1,23 +1,25 @@
-import Home from './pages/home/Home';
-import {useState} from 'react';
 import './App.css';
-
+import Home from './pages/home/Home';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './pages/login/Login';
 
 function App() {
-  const [valor, setValor] = useState(0);
-  function handleClick() {setValor(valor+1);}
-  
   return (
-    <div>
-      <Home  title="Acesso de Schrodinger"
-    description="Muito e pouco acessado."/>
-    <h1>Acessos ao site {valor}</h1>
-    <button onClick={handleClick}> +1 Acesso </button>
-    </div>
-   
-          
-    
-  );
+    <>
+    <BrowserRouter>
+        <Navbar />
+          <div className='min-h-[80vh]'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/home" element={<Home />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+    </>
+);
 }
-
 export default App;
