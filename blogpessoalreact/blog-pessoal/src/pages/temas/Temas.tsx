@@ -1,1 +1,0 @@
-import "./Temas.css";
