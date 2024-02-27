@@ -28,7 +28,7 @@ public class Postagem {
 	private String titulo;
 	
 	@NotBlank (message = "O texto é obrigatório!")
-	@Size (min = 10, max = 1000, message= "O texto deve ter de 5 a 100 caracteres.")
+	@Size (min = 10, max = 5000, message= "O texto deve ter de 10 a 5000 caracteres.")
 	private String texto;
 	
 	@UpdateTimestamp
@@ -82,6 +82,13 @@ public class Postagem {
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
-	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	
 }
