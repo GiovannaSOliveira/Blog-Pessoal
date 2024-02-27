@@ -43,9 +43,9 @@ function Login() {
           className="flex justify-center items-center flex-col w-1/2 gap-4"
           onSubmit={login}
         >
-          <h2 className="text-mustard text-5xl ">Entrar</h2>
-          <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuário</label>
+          <h2 className="text-mustard font-playfair text-5xl ">Entrar</h2>
+          <div className="flex flex-col w-full text-rosebutton">
+            <label htmlFor="usuario" className="pl-4 font-bebas">Usuário</label>
             <input
               type="text"
               id="usuario"
@@ -53,23 +53,23 @@ function Login() {
               placeholder="Usuário"
               className="border-2 border-purpur text-gray-500 
               focus:text-rosinha focus:border-rosebud 
-              focus:outline-none rounded-full p-2"
+              focus:outline-none rounded-full p-2 pl-4"
               value={usuarioLogin.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
               }
             />
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+          <div className="flex flex-col w-full text-rosebutton">
+            <label htmlFor="senha" className="pl-4 font-bebas">Senha</label>
             <input
               type="password"
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="border-2 border-purpur text-gray-500 
+              className="border-2 border-purpur text-gray-500 text-left px-4
               focus:text-rosinha focus:border-rosebud 
-              focus:outline-none rounded-full p-2"
+              focus:outline-none rounded-full p-2 pl-4"
               value={usuarioLogin.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
@@ -79,11 +79,11 @@ function Login() {
           <button
             type="submit"
             className="rounded bg-rosebutton hover:bg-rosebud 
-            text-offwhite w-1/2 py-2 flex justify-center"
+            text-offwhite w-1/2 py-2 flex justify-center font-bebas"
           >
             {isLoading ? (
               <RotatingLines
-                strokeColor="offwhite"
+                strokeColor="#e9dfd3"
                 strokeWidth="5"
                 animationDuration="0.75"
                 width="24"
@@ -98,7 +98,7 @@ function Login() {
 
           <p className="text-offwhite">
             Ainda não tem uma conta?{" "}
-            <Link to="/cadastro" className="pl-3 text-rosebutton hover:text-rosebud hover:cursor-pointer">
+            <Link to="/cadastro" className="pl-3 font-bebas text-rosebutton hover:text-rosebud hover:cursor-pointer">
               Cadastre-se
             </Link>
           </p>

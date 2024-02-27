@@ -4,14 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: "#1A1423",
-        purpur: "#3D314A",
-        rosebud: "#684756",
-        mustard: "#96705B",
-        kind: "#AB8476",
-        offwhite: "#E7DFD5",
-        rosinha: "#AB7379",
-        rosebutton:"#956A76",
+        dark: "#261c37",
+        purpur: "#3d2952",
+        rosebud: "#7b3352",
+        mustard: "#b5693c",
+        kind: "#dda26c",
+        offwhite: "#e9dfd3",
+        rosinha: "#be616a",
+        rosebutton:"#aa556c",
       },
     },
   },
